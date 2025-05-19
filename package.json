@@ -1,4 +1,5 @@
 {
+	"homepage": "https://JaiNagendra.github.io/JaiNagendra",
 	"name": "chat-app-yt",
 	"version": "1.0.0",
 	"description": "",
@@ -6,6 +7,8 @@
 	"scripts": {
 		"server": "nodemon backend/server.js",
 		"start": "node backend/server.js",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
 	},
 	"type": "module",
@@ -22,6 +25,7 @@
 		"socket.io": "^4.7.4"
 	},
 	"devDependencies": {
+		"gh-pages": "^6.3.0",
 		"nodemon": "^3.0.3"
 	}
 }
